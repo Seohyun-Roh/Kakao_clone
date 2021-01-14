@@ -1,0 +1,33 @@
+<!--Padding은 box의 경계로부터 안쪽에 있는 공간.
+Border은 box의 경계-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>welcome!</title>
+        <style>
+            *{
+                font-style: italic;
+            }
+            html{
+              border:1px solid gray;  
+            }
+            .class1{
+                height:150px;
+                width:150px;
+                background-color: palevioletred;
+            }
+            .class2{
+                font-weight: bold;
+            }
+            #div1,#div3{
+                background-color: honeydew;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="class1" id="div1">box1</div>
+        <div class="class1 class2">box2</div>
+        <div class="class1 class2" id="div3">box3</div>
+        <div class="class1">box4</div>
+    </body>
+</html>
