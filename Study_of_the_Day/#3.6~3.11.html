@@ -1,7 +1,9 @@
-<!--Padding은 box의 경계로부터 안쪽에 있는 공간.
-Border은 box의 경계
-inline은 width, height를 갖지 않으므로, 위 아래에 margin을 가질 수 없다.
-inline-block의 단점: margin 지정안해도 inline-block 사이에 여백이 생긴다. 정해진 형식이 없다. 반응형 디자인을 지원하지 않는다.-->
+<!--
+Flexbox->자식 엘리먼트에는 어느것도 적지 말아야 함. flex-container가 height를 가지고 있지 않으면 align-items를 사용해도 위치 바뀌지 않음.
+justify-content: 주축(main axis, default가 수평, 변경가능), align-items: 교차축(cross axis, defult가 수직, 변경가능)
+vh(viewport height, height:100vh는 화면 높이의 100%)
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,31 +16,25 @@ inline-block의 단점: margin 지정안해도 inline-block 사이에 여백이 
               border:1px solid gray;  
             }
             body{
+                height:100vh;
                 display:flex;
                 justify-content: center;
                 align-items: center;
-                flex-wrap: wrap; /*wrap으로 하면 */
+                flex-wrap: wrap; /*wrap으로 하면 브라우저 크기를 줄여도 block끼리 겹쳐지지 않고 브라우저 크기에 맞춰서 block들이 이동함*/
             }
             div{
                 display:flex;
                 flex-direction: column;
                 justify-content: flex-end;
                 align-items: center;
-            }
-            .class1{
                 height:150px;
                 width:150px;
+            }
+            .class1{
                 background-color: palevioletred;
             }
             .class2{
                 font-weight: bold;
-            }
-            .ib-class{
-                display: inline-block;
-                background-color: teal;
-                height: 40px;
-                widows: 70px;
-                padding:10px;
             }
             #div1,#div3{
                 background-color: honeydew;
@@ -48,10 +44,7 @@ inline-block의 단점: margin 지정안해도 inline-block 사이에 여백이 
     <body>
         <div class="class1" id="div1">box1</div>
         <div class="class1 class2">box2</div>
-        <div class="class1 class2" id="div3">box3</div>
+        <div class="class2" id="div3">box3</div>
         <div class="class1">box4</div>
-        <span class="ib-class">inline-block1</span>
-        <span class="ib-class">inline-block2</span>
-        <span class="ib-class">inline-block3</span>
     </body>
 </html>
