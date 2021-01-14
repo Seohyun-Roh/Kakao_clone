@@ -1,5 +1,7 @@
 <!--Padding은 box의 경계로부터 안쪽에 있는 공간.
-Border은 box의 경계-->
+Border은 box의 경계
+inline은 width, height를 갖지 않으므로, 위 아래에 margin을 가질 수 없다.
+inline-block의 단점: margin 지정안해도 inline-block 사이에 여백이 생긴다. 정해진 형식이 없다. 반응형 디자인을 지원하지 않는다.-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,6 +13,18 @@ Border은 box의 경계-->
             html{
               border:1px solid gray;  
             }
+            body{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap; /*wrap으로 하면 */
+            }
+            div{
+                display:flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+            }
             .class1{
                 height:150px;
                 width:150px;
@@ -18,6 +32,13 @@ Border은 box의 경계-->
             }
             .class2{
                 font-weight: bold;
+            }
+            .ib-class{
+                display: inline-block;
+                background-color: teal;
+                height: 40px;
+                widows: 70px;
+                padding:10px;
             }
             #div1,#div3{
                 background-color: honeydew;
@@ -29,5 +50,8 @@ Border은 box의 경계-->
         <div class="class1 class2">box2</div>
         <div class="class1 class2" id="div3">box3</div>
         <div class="class1">box4</div>
+        <span class="ib-class">inline-block1</span>
+        <span class="ib-class">inline-block2</span>
+        <span class="ib-class">inline-block3</span>
     </body>
 </html>
