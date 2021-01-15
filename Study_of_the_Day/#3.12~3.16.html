@@ -16,45 +16,43 @@
         height: 150px;
         width: 150px;
       }
-      div:first-child {
-        background-color: wheat;
-      }
-      /*
-      div:last-child {
-        background-color: tomato;
-      }
-      */
       span {
         background-color: yellowgreen;
       }
-      .spanclass span:nth-child(2) {
-        background-color: violet;
-      }
-      .spanclass span:nth-child(odd) {
-        /*odd,even뿐만 아니라 2n,2n+1,3n,...등 모두 가능*/
+      /*p의 (바로 뒤의)형제 span을 바꾸고 싶을 때*/
+      p + span {
         background-color: tomato;
       }
-      /*last-child, first-child는 각각 따지는 것이x 따라서 span중에서 마지막 것을 선택하고 싶으면 last-of-type 사용*/
-      div span:last-of-type {
-        background-color: darkblue;
+      /*p의 (뒤에 있는 모든)형제 span을 바꾸고 싶을 때*/
+      p ~ span {
+        background-color: bisque;
       }
-      /*p(부모)안에 있는 span(자식)을 바꾸고 싶을 때*/
-      p span {
+      /*required인 input을 바꾸고 싶을 때*/
+      input:required {
+        background-color: burlywood;
+      }
+      /*특정 타입을 선택해서 바꿔주고 싶을 때*/
+      input[type='text'] {
         font-style: italic;
       }
-      /*body바로 밑에 있는 span만 바꾸고 싶을 때*/
-      body > span {
-        font-weight: bold;
+      /*placeholder를 골라서 바꿔줄 수도 있다.
+      placeholder~='name'하면 name이라는 단어를 포함한 모든 placeholder 선택(이 때, first name(O), firstname(X))
+      placeholder*='name'하면 name을 포함한 모든 placeholder 선택(first name(O), firstname(O)*/
+      input[placeholder='first name'] {
+        background-color: chartreuse;
       }
     </style>
   </head>
   <body>
-    <div></div>
-    <p>hi This is p tag. I want to use <span>span</span> tag too. Thx!</p>
-    <div></div>
-    <div></div>
-    <div class="spanclass"><span>hh </span><span>hh </span><span>hh </span><span>hh </span><span>hh </span><span>hh </span></div>
-    <div></div>
-    <span>body span! </span><span>body span! </span>
+    <form>
+      <span>Hello!</span>
+      <p>hi This is p tag. I want to use <span>span</span> tag too. Thx!</p>
+      <span>Hello!</span>
+      <span>Hello!</span>
+      <div><span>span in div</span></div>
+      <input type="text" placeholder="first name" />
+      <input type="text" placeholder="last name" />
+      <input type="password" required placeholder="password" />
+    </form>
   </body>
 </html>
