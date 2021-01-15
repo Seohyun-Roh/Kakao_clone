@@ -1,6 +1,8 @@
 <!--
   <Position>
-fixed(->사용하면 다른 레이어 상에 있게 된다.)
+static:레이아웃이 박스를 처음 위치하는 곳에 두는 것.default이기 때문에 안써줘도 된다.
+relative:element가 처음 위치한 곳에서 조금만 이동하고 싶을 때 사용
+absolute: top, bottom, left, right 쓰고 싶을 때 사용(가장 가까운 relative 부모를 기준으로 이동, 이때 relative 부모가 없으면 body)
 -->
 <!DOCTYPE html>
 <html>
@@ -12,19 +14,23 @@ fixed(->사용하면 다른 레이어 상에 있게 된다.)
         margin: 50px;
       }
       div {
+        position: relative; /*relative 안써주면 absolute인 second div가 body를 기준으로 배치된다.*/
         background-color: aquamarine;
         height: 150px;
         width: 150px;
       }
-      .first {
-        position: fixed;
-        opacity: 0.5; /*불투명도 0~1(투명-->불투명)*/
+      .second {
+        position: absolute;
+        top: 30px;
+        height: 50px;
+        width: 50px;
         background-color: tomato;
       }
     </style>
   </head>
   <body>
-    <div class="first"></div>
-    <div></div>
+    <div>
+      <div class="second"></div>
+    </div>
   </body>
 </html>
