@@ -1,0 +1,30 @@
+<!--
+  <Position>
+fixed(->사용하면 다른 레이어 상에 있게 된다.)
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>welcome!</title>
+    <style>
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      div {
+        background-color: aquamarine;
+        height: 150px;
+        width: 150px;
+      }
+      .first {
+        position: fixed;
+        opacity: 0.5; /*불투명도 0~1(투명-->불투명)*/
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="first"></div>
+    <div></div>
+  </body>
+</html>
