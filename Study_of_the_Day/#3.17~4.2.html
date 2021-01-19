@@ -1,10 +1,7 @@
 <!--
- <States>
-   -active: 마우스 누르고있는 중일 때
-   -hover: 마우스가 대상 위에 있을 때
-   -focus: 키보드로 선택되었을 때
-   -visited: 링크에만 적용, 방문한 사이트면 적용됨
-   -focus-within: focused인 자식을 가진 부모 엘리먼트의 상태
+  ::placeholder -> placeholder 를 꾸밀수있게 해줌
+  ::selection -> 선택(드래그)한 부분을 꾸밀 수 있게 해줌
+  ::first-letter -> 맨 첫 글자만 꾸며주고 싶을 때 사용
 -->
 <!DOCTYPE html>
 <html>
@@ -15,29 +12,29 @@
         padding: 5px;
         border-radius: 5px;
       }
-      input:hover {
-        background-color: teal;
+      form {
+        background-color: thistle;
       }
-      input:focus {
-        background-color: wheat;
-      }
-      input:active {
-        background-color: tomato;
-      }
-      a:visited {
-        color: violet;
-      }
-      form:focus-within {
+      /*form이 hover상태로 되면 input이 바뀜(부모의 state에 따라 자식을 바꿔줌)*/
+      form:hover input {
         background-color: greenyellow;
+      }
+      input::placeholder {
+        color: brown;
+      }
+      p::selection {
+        background-color: cadetblue;
+      }
+      p::first-letter {
+        font-size: 30px;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
     <form>
-      <input type="text" name="" id="" />
-      <input type="text" name="" id="" />
-      <input type="text" name="" id="" />
+      <input type="text" placeholder="Name!" />
     </form>
-    <a href="https://nomadcoders.co/m.svg">Go to Link</a>
+    <p>hihihihihihihihihi!!</p>
   </body>
 </html>
