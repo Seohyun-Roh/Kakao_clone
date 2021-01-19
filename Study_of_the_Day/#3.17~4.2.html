@@ -1,40 +1,36 @@
 <!--
-  ::placeholder -> placeholder 를 꾸밀수있게 해줌
-  ::selection -> 선택(드래그)한 부분을 꾸밀 수 있게 해줌
-  ::first-letter -> 맨 첫 글자만 꾸며주고 싶을 때 사용
+  css의 color system
+  1) hexadecimal color(16진수 컬러) ex)#000000
+  2) RGB 방식 ex) rgb(250,209,0); rgba(250,209,0,0.5); ->a는 투명도를 나타냄
+  <Variables>
+    :root라는 element에 변수 추가(root는 기본적으로 모든 document의 뿌리가 되는 것)
+    변수 이름 설정시 --로 시작, 공백은 - 로 해줘야함
 -->
 <!DOCTYPE html>
 <html>
   <head>
     <title>welcome!</title>
     <style>
-      input {
-        padding: 5px;
-        border-radius: 5px;
+      :root {
+        --main-color: #fcce00;
+        --second-color: rgb(150, 209, 0);
+        --third-color: rgba(150, 300, 0, 0.3);
       }
       form {
-        background-color: thistle;
+        background-color: var(--main-color);
       }
-      /*form이 hover상태로 되면 input이 바뀜(부모의 state에 따라 자식을 바꿔줌)*/
-      form:hover input {
-        background-color: greenyellow;
+      p {
+        background-color: var(--second-color);
       }
-      input::placeholder {
-        color: brown;
-      }
-      p::selection {
-        background-color: cadetblue;
-      }
-      p::first-letter {
-        font-size: 30px;
-        font-weight: bold;
+      span {
+        background-color: var(--third-color);
       }
     </style>
   </head>
   <body>
     <form>
-      <input type="text" placeholder="Name!" />
+      <p>This is Second color!</p>
+      <span>Third Color!</span>
     </form>
-    <p>hihihihihihihihihi!!</p>
   </body>
 </html>
