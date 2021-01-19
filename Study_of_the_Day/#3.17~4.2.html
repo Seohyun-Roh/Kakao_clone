@@ -1,36 +1,44 @@
 <!--
-  css의 color system
-  1) hexadecimal color(16진수 컬러) ex)#000000
-  2) RGB 방식 ex) rgb(250,209,0); rgba(250,209,0,0.5); ->a는 투명도를 나타냄
-  <Variables>
-    :root라는 element에 변수 추가(root는 기본적으로 모든 document의 뿌리가 되는 것)
-    변수 이름 설정시 --로 시작, 공백은 - 로 해줘야함
+  <Transition>: 어떤 상태에서 다른 상태로의 변화를 애니메이션으로 만드는 방법(state가 없는 요소에 써야함)
+    ease-in function: 브라우저에게 애니메이션이 어떻게 변할지 말해주는 것
+    (default: linear, ease-in, ease-out, ease-in-out. 이 외에 따로 만들어줄 경우 cubiz-beizer이용)
+    http://matthewlein.com/tools/ceaser <--cubiz-beizer는 옆에 사이트 참고해보기!
+  <Transfomation>
+    transfomation은 일종의 3d transfomation이기 대문에 box element를 변형시키지 않는다.(margin,padding 적용 x)
 -->
 <!DOCTYPE html>
 <html>
   <head>
     <title>welcome!</title>
     <style>
-      :root {
-        --main-color: #fcce00;
-        --second-color: rgb(150, 209, 0);
-        --third-color: rgba(150, 300, 0, 0.3);
+      img {
+        border: 1px solid black;
+        border-radius: 50%;
+        transform: rotateY(35deg);
+        transition: all 3s cubic-bezier(0.77, 0, 0.175, 1);
       }
-      form {
-        background-color: var(--main-color);
+      img:hover {
+        transform: rotateY(360deg);
       }
-      p {
-        background-color: var(--second-color);
+      button {
+        border: 1px solid black;
+        border-radius: 5px;
+        height: 100px;
+        width: 200px;
+        font-size: 30px;
+        background-color: tomato;
+        color: wheat;
+        margin-left: 30px;
+        transition: all 5s ease-in-out;
       }
-      span {
-        background-color: var(--third-color);
+      button:hover {
+        background-color: wheat;
+        color: tomato;
       }
     </style>
   </head>
   <body>
-    <form>
-      <p>This is Second color!</p>
-      <span>Third Color!</span>
-    </form>
+    <button>buttondddd</button>
+    <img src="https://nomadcoders.co/m.svg" />
   </body>
 </html>
