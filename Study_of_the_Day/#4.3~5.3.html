@@ -1,5 +1,5 @@
 <!--
-<Animation>: transition은 state가 변할 때만, state 안변해도 계속 움직이게 하고 싶다면 animation 쓰기
+<Media Query>: css를 이용해 스크린의 사이즈를 알 수 있는 방법
 -->
 <!DOCTYPE html>
 <html>
@@ -13,40 +13,39 @@
         justify-content: center;
         flex-direction: column;
       }
-      @keyframes boxflip {
-        from {
-          transform: rotateX(0);
-        }
-        to {
-          transform: rotateX(360deg);
-        }
-      }
-      /*animation을 단계적으로 만들어주고 싶을 때-> % 이용하기(0~100까지 가능)*/
-      @keyframes boxflip2 {
-        0% {
-          transform: rotateY(0);
-        }
-        50% {
-          transform: rotateY(180deg) translateX(100px);
-        }
-        100% {
-          transform: rotateY(0);
-        }
-      }
       div {
         width: 200px;
         height: 200px;
-        animation: boxflip 5s ease-in-out infinite;
         background-color: tomato;
       }
-      #div2 {
-        background-color: teal;
-        animation: boxflip2 5s ease-in-out infinite;
+      @media screen and (max-width: 700px) {
+        /*스크린의 크기가 700px보다 작을 경우*/
+        div {
+          background-color: thistle;
+        }
+      }
+      @media screen and (min-width: 700px) and (max-width: 1200px) {
+        div {
+          background-color: wheat;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        div {
+          background-color: yellowgreen;
+        }
+      }
+      span {
+        font-size: 36px;
+      }
+      @media screen and (orientation: landscape) {
+        span {
+          display: none;
+        }
       }
     </style>
   </head>
   <body>
     <div></div>
-    <div id="div2"></div>
+    <span>Please flip your phone!</span>
   </body>
 </html>
