@@ -15,6 +15,34 @@ BEM(Block Element Modifier): CSS에서 클래스 이름 지을 때 따르는 규
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to Kokoa Talk</title>
+    <style>
+      /*구글 폰트 사용할 때, html에 복붙해도 좋지만 css에 해주는게 더 좋음. import는 css의 맨 윗부분에 넣어주고 font-family는 body에!
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');*/
+      body {
+        /*폰트-> font-family에 있는 옵션 써도 되고 google font같은 곳에서 가져와도 좋음!*/
+        /*font-family: 'Open Sans', sans-serif;*/
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .status-bar {
+        display: flex; /*3개의 요소가 다 한줄에 있도록*/
+        justify-content: space-between;
+      }
+      .status-bar__column:first-child span {
+        margin-right: 5px;
+      }
+      .status-bar__column:nth-child(2) {
+        display: flex;
+        justify-content: center;
+      }
+      .status-bar__column:last-child {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .status-bar__column .fa-battery-full {
+        margin: 0px 5px;
+      }
+    </style>
   </head>
   <body>
     <div class="status-bar">
