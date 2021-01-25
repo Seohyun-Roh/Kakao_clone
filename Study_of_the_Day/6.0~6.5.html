@@ -1,0 +1,51 @@
+<!--
+.gitignore: 깃 업로드 할때 무시하고싶은 파일 이름을 기록하는 파일
+VSC 단축키:
+- 파일이 html 일 때, !치고 엔터하면 기본적인 html 코드가 작성됨
+- head에서 css 외부연결할 때, link:css 엔터->기본적인 css 연결 코드 작성됨
+BEM(Block Element Modifier): CSS에서 클래스 이름 지을 때 따르는 규칙
+아이콘->직접 구하거나, 만들어서 추출 or svg 파일(픽셀X, 수학(좌표)으로만 구성) 이용 하는 방법이 있음
+아이콘 구하는 사이트-> 1.Heroicons 2.FontAwesome
+<script></script>는 항상 body의 마지막에 써줘야 함
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Kokoa Talk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+        <!--FontAwesome에서 불러온 이미지-->
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>11%</span>
+        <i class="fas fa-battery-full"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+      <p class="welcome-header__text">If you have a Kokoa Account, log in with your email or phone number.</p>
+    </header>
+
+    <form id="login-form">
+      <input type="text" placeholder="Email or phone number" />
+      <input type="password" placeholder="password" />
+      <input type="submit" value="Log in" />
+      <!--<button>해줘도 되고 input type="submit"해도 된다.-->
+      <a href="#">Find Kokoa Account or Password</a>
+    </form>
+
+    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+    <!--FontAwesome을 설치하기 위한 코드-->
+  </body>
+</html>
