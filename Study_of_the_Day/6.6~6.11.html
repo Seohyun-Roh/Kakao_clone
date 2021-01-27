@@ -1,69 +1,30 @@
 <!--
-reset.css->css파일. 대부분의 태그에 margin,padding,border:0 등 을 가진 css파일(구글링 하면 나옴!)
+    <form action="이동할 위치" method="POST, GET 둘중 하나">
+    post-> 백엔드 서버에 정보를 전송하는 방식
+    get-> 보안에 취약하므로 username이나 pw같은 정보는 get으로 보내지 않도록
 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to Kokoa Talk</title>
+    <title>Friends - Kokoa Clone</title>
     <style>
-      .status-bar {
-        display: flex;
-        justify-content: center;
-        padding: 5px 3px;
-        /*스크롤 내려도 위에 계속 있도록 설정*/
+      .nav {
         position: fixed;
-        top: 0px;
+        bottom: 0;
         width: 100%;
+        background-color: var(--gray);
+        padding: 20px 50px;
+        box-sizing: border-box; /*position, bottom, width로 아래에 고정했는데 맨 뒤 아이콘 사라질 경우 box-sizing 사용해주기*/
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
       }
-      .welcome-header {
-        margin: 90px 0px;
-        text-align: center;
+      .nav__list {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-weight: 500;
+        justify-content: space-between;
       }
-      .welcome-header__title {
-        font-size: 25px;
-        margin-bottom: 20px;
-      }
-      .welcome-header__text {
-        width: 60%;
-        opacity: 0.7;
-      }
-      .login-form {
-        display: flex;
-        flex-direction: column;
-        margin: 0px 30px;
-      }
-      .login-form__input {
-        padding: 15px 0px;
-        border: none;
-        font-size: 18px;
-        margin-bottom: 25px;
-      }
-      .login-form__btn /*#login-form input:not([type='submit']) --> submit이 아닌 모든 input에 적용됨*/ {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        transition: border-color 0.3s ease-in-out;
-      }
-      .login-form__input::placeholder {
-        color: rgba(0, 0, 0, 0.4);
-      }
-      .login-form__input:focus {
-        border-color: var(--yellow);
-      }
-      .login-form__btn {
-        background-color: var(--yellow);
-        cursor: pointer;
-        padding: 20px 0px;
-        border-radius: 5px;
-      }
-      .login-form__a {
-        text-align: center;
-        font-size: 13px;
+      .nav__link {
+        color: #2e363e;
       }
     </style>
   </head>
@@ -82,17 +43,26 @@ reset.css->css파일. 대부분의 태그에 margin,padding,border:0 등 을 가
         <i class="fas fa-bolt"></i>
       </div>
     </div>
-    <header class="welcome-header">
-      <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
-      <p class="welcome-header__text">If you have a Kokoa Account, log in with your email or phone number.</p>
-    </header>
 
-    <form action="friends.html" method="get" class="login-form">
-      <input class="login-form__input" type="text" placeholder="Email or phone number" />
-      <input class="login-form__input" type="password" placeholder="password" />
-      <input class="login-form__btn" type="submit" value="Log in" />
-      <a class="login-form__a" href="#">Find Kokoa Account or Password</a>
-    </form>
+    <!--
+        nav>ul>li*4>a 입력하면 아래와 같은 양식으로 만들어짐 -->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html"><i class="fas fa-user fa-2x"></i></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="#"><i class="far fa-comment fa-2x"></i></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="#"><i class="fas fa-search fa-2x"></i></a>
+        </li>
+        <li class="nav__btn">
+          <!-- 점점점 아이콘-> ellipsis로 검색-->
+          <a class="nav__link" href="#"><i class="fas fa-ellipsis-h fa-2x"></i></a>
+        </li>
+      </ul>
+    </nav>
 
     <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
   </body>
