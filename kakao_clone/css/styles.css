@@ -11,6 +11,7 @@
 /* Screens */
 @import 'screens/login.css';
 @import 'screens/friends.css';
+@import 'screens/find.css';
 
 body {
   color: #2e363e;
@@ -22,5 +23,11 @@ body {
   padding: 0px var(--horizontal-space);
 }
 .box {
-  height: 100px;
+  height: 110px;
+}
+.ellipsis {
+  background-color: tomato;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
 }
