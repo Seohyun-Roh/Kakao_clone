@@ -1,0 +1,9 @@
+.more-screen .icon-row {
+  margin-top: 5px;
+}
+.more-screen .icon-row__icon {
+  margin-top: 30px;
+}
+.exclamation {
+  color: tomato;
+}
