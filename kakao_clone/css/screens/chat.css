@@ -1,0 +1,9 @@
+#chat-screen {
+  background-color: var(--chat-color);
+}
+#chat-screen .status-bar {
+  background-color: var(--chat-color);
+}
+#chat-screen .alt-header {
+  background-color: var(--chat-color);
+}
