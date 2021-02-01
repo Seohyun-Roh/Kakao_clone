@@ -8,6 +8,7 @@
 @import 'components/user-component.css';
 @import 'components/badge.css';
 @import 'components/icon-raw.css';
+@import 'components/alt-screen-header.css';
 
 /* Screens */
 @import 'screens/login.css';
@@ -25,7 +26,7 @@ body {
   padding: 0px var(--horizontal-space);
 }
 .box {
-  height: 110px;
+  height: 115px;
 }
 .ellipsis {
   background-color: tomato;
