@@ -4,6 +4,7 @@
   padding: var(--horizontal-space);
   margin-top: 20px;
   position: fixed;
+  z-index: 99;
   top: 0px;
   width: 100%;
   box-sizing: border-box;
