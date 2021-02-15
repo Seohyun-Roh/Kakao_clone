@@ -1,74 +1,73 @@
-<!--
-    status bar의 맨 앞 No service 부분이 커서 시계가 중간이 안맞을 때(div들이 다른 width를 가지고 있어 space-between이 안맞을 때)
-    justify-content 대신 컨테이너 하나를 중심에 놓는 CSS hack
--->
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <link rel="stylesheet" href="css/styles.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to Kokoa Talk</title>
-    <style>
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      }
-      .status-bar {
-        display: flex; /*3개의 요소가 다 한줄에 있도록*/
-        justify-content: center;
-      }
-      .status-bar__column {
-        width: 33%; /*각각 width가 다 같도록*/
-      }
-      .status-bar__column:first-child span {
-        margin-right: 5px;
-      }
-      .status-bar__column:nth-child(2) {
-        /*시계가 가운데 오도록*/
-        display: flex;
-        justify-content: center;
-      }
-      .status-bar__column:last-child {
-        display: flex;
-        justify-content: flex-end; /*오른쪽 정렬*/
-        align-items: center; /*배터리 퍼센트, 아이콘들이 같은선상에 있지 않아 center로 맞춰줌*/
-      }
-      .status-bar__column .fa-battery-full {
-        /*텍스트와 아이콘 사이의 간격 조정->가운데 있는 배터리 아이콘의 margin 조정해주기*/
-        margin: 0px 5px;
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>You Are Awesome!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="6.0~6.5.css">
   </head>
   <body>
-    <div class="status-bar">
-      <div class="status-bar__column">
-        <span>No Service</span>
-        <i class="fas fa-wifi"></i>
-        <!--FontAwesome에서 불러온 이미지-->
-      </div>
-      <div class="status-bar__column">
-        <span>18:43</span>
-      </div>
-      <div class="status-bar__column">
-        <span>11%</span>
-        <i class="fas fa-battery-full"></i>
-        <i class="fas fa-bolt"></i>
-      </div>
+    <div class="list-header">
+      <span class="list-header__icon"><i class="fas fa-times fa-2x"></i></span>
+      <span class="list-header__title">Playlist</span>
+      <span></span>
     </div>
-    <header class="welcome-header">
-      <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
-      <p class="welcome-header__text">If you have a Kokoa Account, log in with your email or phone number.</p>
-    </header>
-
-    <form id="login-form">
-      <input type="text" placeholder="Email or phone number" />
-      <input type="password" placeholder="password" />
-      <input type="submit" value="Log in" />
-      <!--<button>해줘도 되고 input type="submit"해도 된다.-->
-      <a href="#">Find Kokoa Account or Password</a>
-    </form>
-
-    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
-    <!--FontAwesome을 설치하기 위한 코드-->
+    <div class="list-screen">
+        <div class="playing">
+            <div class="playing__column">
+              <span class="album-img album-img--lg"><i class="far fa-image fa-2x"></i></span>
+            </div>
+            <div class="playling__column">
+              <span class="music-name music-name--lg">Random Love</span>
+              <span class="singer_name">by Divacy Kapoor</span>
+            </div>
+        </div>
+        <div class="play__icons">
+            <span class="play__button"><i class="fas fa-caret-right fa-lg"></i>Play</span>
+            <span class="play__icon"><i class="far fa-heart"></i></span>
+            <span class="play__icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="list">
+          <div class="playlist">
+            <div class="playlist__column">
+              <span class="album-img"></span>
+            </div>
+            <div class="playlist__column">
+              <span class="music-name">Matargasti</span>
+              <span class="singer_name">Mohit Chauhan</span>
+            </div>
+          </div>
+          <div class="playlist">
+            <div class="playlist__column">
+              <span class="album-img"></span>
+            </div>
+            <div class="playlist__column">
+              <span class="music-name">Attitude</span>
+              <span class="singer_name">Lewis OfMan . Attitude</span>
+            </div>
+          </div>
+          <div class="playlist">
+            <div class="playlist__column">
+              <span class="album-img"></span>
+            </div>
+            <div class="playlist__column">
+              <span class="music-name">Try Everything</span>
+              <span class="singer_name">Shakira . Zootopia</span>
+            </div>
+          </div>
+          <div class="playlist">
+            <div class="playlist__column">
+              <span class="album-img"></span>
+            </div>
+            <div class="playlist__column">
+              <span class="music-name">Sunflower</span>
+              <span class="singer_name">Joseph Vincent . Sunflower</span>
+            </div>
+          </div>
+        </div>
+    </div>
   </body>
+  <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
 </html>
