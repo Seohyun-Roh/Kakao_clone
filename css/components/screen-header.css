@@ -18,6 +18,41 @@
   margin-left: 25px;
 }
 
+@keyframes rotateSearch {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.screen-header__icons .fa-search {
+  transition: color 0.3s ease-in-out;
+}
+.screen-header__icons .fa-search:hover {
+  color: #8f61af;
+  animation: rotateSearch 1s ease-in infinite;
+}
+
+@keyframes rotateMusic {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: none;
+  }
+}
+.screen-header__icons .fa-music {
+  transition: color 0.3s ease-in-out;
+}
+.screen-header__icons .fa-music:hover {
+  color: #d34089;
+  animation: rotateMusic 0.5s ease-in-out infinite;
+}
+
 @keyframes rotateCog {
   from {
     transform: none;
@@ -26,7 +61,29 @@
     transform: rotateZ(360deg);
   }
 }
-
+.screen-header__icons .fa-cog {
+  transition: color 0.2s ease-in-out;
+}
 .screen-header__icons .fa-cog:hover {
+  color: rgba(0, 0, 0, 0.7);
   animation: rotateCog 2s linear infinite;
+}
+
+@keyframes rotateComment {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: none;
+  }
+}
+.screen-header__icons .fa-comment-dots {
+  transition: color 0.2s ease-in-out;
+}
+.screen-header__icons .fa-comment-dots:hover {
+  color: var(--yellow);
+  animation: rotateComment 0.5s linear infinite;
 }
