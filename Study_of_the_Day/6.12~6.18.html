@@ -1,96 +1,145 @@
-<!--
-    box-sizing:border-box;->box 사이즈를 늘리는 것을 원하지 않을 때
-    border-> 아예 원으로 만들고 싶다면 border-radius를 width의 절반으로 설정(ex> width:20px; border-radius:10px;)
--->
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <link rel="stylesheet" href="css/styles.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Friends - Kokoa Clone</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>You Are Awesome!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="6.12~6.17.css" />
   </head>
   <body>
-    <div class="status-bar">
-      <div class="status-bar__column">
-        <span>No Service</span>
-        <i class="fas fa-wifi"></i>
-      </div>
-      <div class="status-bar__column">
-        <span>18:43</span>
-      </div>
-      <div class="status-bar__column">
-        <span>99%</span>
-        <i class="fas fa-battery-full"></i>
-        <i class="fas fa-bolt"></i>
-      </div>
-    </div>
-    <header class="screen-header">
-      <h1 class="screen-header__title">Friends</h1>
-      <div class="screen-header__icons">
-        <span><i class="fas fa-search fa-lg"></i></span>
-        <span><i class="fas fa-music fa-lg"></i></span>
-        <span><i class="fas fa-cog fa-lg"></i></span>
-      </div>
-    </header>
-
-    <a id="friends-display-link">
-      <i class="fas fa-info-circle"></i> Friends' Names Display
-      <i class="fas fa-chevron-right fa-xs"></i>
-    </a>
-    <!-- .클래스명*2 엔터-> <div class="클래스명"></div>*2개 자동으로 생김-->
-    <main class="friends-screen">
-      <div class="user-component">
-        <div class="user-component__column">
-          <img src="https://avatars.githubusercontent.com/u/76952602?s=460&v=4" class="user-component__avatar user-component__avatar--xl" />
-          <div class="user-component__text">
-            <h4 class="user-component__title">Seohyun</h4>
-            <!-- SUBTITLE! <h6 class="user-component__subtitle">This text whatever</h6>  -->
-          </div>
+    <div class="screen">
+      <div class="screen__column">
+        <div class="screen__header">
+          <span><i class="fas fa-arrow-left"></i></span>
+          <span><i class="fas fa-search"></i></span>
         </div>
-        <div class="user-component__column"></div>
-      </div>
-      <div class="friends-screen__channel">
-        <div class="friends-screen__channel-header">
-          <span>Channel</span>
-          <i class="fas fa-chevron-up fa-xs"></i>
+        <div class="artist__info">
+          <img
+            class="artist__img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY-1DA5dnyzCsi7MFi9i9gUwezMuG9-ECF0Q&usqp=CAU"
+          />
+          <span class="artist__name">Shawn Mendes</span>
+          <span class="artist__genre">Pop</span>
         </div>
-        <div class="user-component">
-          <div class="user-component__column">
-            <img src="https://avatars.githubusercontent.com/u/76952602?s=460&v=4" class="user-component__avatar user-component__avatar--sm" />
-            <div class="user-component__text">
-              <h4 class="user-component__title user-component__title--not-bold">Channel</h4>
+        <div class="btn__array">
+          <span>Shuffle</span>
+          <span><i class="fas fa-heart"></i> 212 971</span>
+        </div>
+        <div class="music-list">
+          <div class="music-list__item">
+            <div class="music-list__item__column">
+              <img
+                class="music__img"
+                src="https://image.bugsm.co.kr/album/images/1000/5673/567391.jpg"
+              />
+            </div>
+            <div class="music-list__item__column">
+              <span>Shawn Mendes</span>
+              <span>There's Nothing Holdin' Me Back</span>
+            </div>
+            <div class="music-list__item__column">
+              <i class="fas fa-ellipsis-v"></i>
             </div>
           </div>
-          <div class="user-component__column">
-            <span>2 <i class="fas fa-chevron-right fa-xs"></i></span>
+          <div class="music-list__item">
+            <div class="music-list__item__column">
+              <img
+                class="music__img"
+                src="https://image.bugsm.co.kr/album/images/1000/7244/724432.jpg"
+              />
+              <i class="far fa-play-circle fa-lg"></i>
+            </div>
+            <div class="music-list__item__column">
+              <span>Shawn Mendes</span>
+              <span>Where Were You In The Morning?</span>
+            </div>
+            <div class="music-list__item__column">
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+          <div class="music-list__item">
+            <div class="music-list__item__column">
+              <img
+                class="music__img"
+                src="https://image.bugsm.co.kr/album/images/1000/8979/897933.jpg"
+              />
+            </div>
+            <div class="music-list__item__column">
+              <span>Shawn Mendes</span>
+              <span>Señorita</span>
+            </div>
+            <div class="music-list__item__column">
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+          <div class="music-list__item">
+            <div class="music-list__item__column">
+              <img
+                class="music__img"
+                src="https://image.bugsm.co.kr/album/images/1000/7244/724432.jpg"
+              />
+            </div>
+            <div class="music-list__item__column">
+              <span>Shawn Mendes</span>
+              <span>Lost In Japan</span>
+            </div>
+            <div class="music-list__item__column">
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+        </div>
+        <div class="play-bar">
+          <div class="play-bar__column">
+            <span>Shawn Mendes</span>
+            <span>Where Were You In The Morning?</span>
+          </div>
+          <div class="play-bar__column">
+            <span><i class="fas fa-caret-left"></i></span>
+            <span><i class="fas fa-pause"></i></span>
+            <span><i class="fas fa-caret-right"></i></span>
           </div>
         </div>
       </div>
-    </main>
-
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__btn">
-          <a class="nav__link" href="friends.html"><i class="fas fa-user fa-2x"></i></a>
-        </li>
-        <li class="nav__btn">
-          <a class="nav__link" href="#">
-            <span class="nav__notification">1</span>
-            <i class="far fa-comment fa-2x"></i>
-          </a>
-        </li>
-        <li class="nav__btn">
-          <a class="nav__link" href="#"><i class="fas fa-search fa-2x"></i></a>
-        </li>
-        <li class="nav__btn">
-          <a class="nav__link" href="#">
-            <span class="nav__notification nav__ellipsis"> </span>
-            <i class="fas fa-ellipsis-h fa-2x"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+      <div class="screen__column">
+        <div class="screen__header">
+          <span><i class="fas fa-arrow-left"></i></span>
+          <span><i class="fas fa-ellipsis-v"></i></span>
+        </div>
+        <div class="playing__info">
+          <img
+            class="playing__img"
+            src="https://image.bugsm.co.kr/album/images/1000/7244/724432.jpg"
+          />
+          <span class="playing__name">Where Were You In The Morning?</span>
+          <span class="playing__artist">Shawn Mendes</span>
+        </div>
+        <div class="playing__time">
+          <span>1:56</span>
+          <span>3:20</span>
+        </div>
+        <div class="playing__bar">
+          <div></div>
+          <span></span>
+          <div></div>
+        </div>
+        <div class="playing__btn">
+          <span><i class="fas fa-sync-alt fa-lg"></i></span>
+          <span><i class="fas fa-caret-left fa-2x"></i></span>
+          <span class="btn__play"
+            ><i class="fas fa-caret-right fa-lg"></i
+          ></span>
+          <span><i class="fas fa-caret-right fa-2x"></i></span>
+          <span><i class="fas fa-random fa-lg"></i></span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
