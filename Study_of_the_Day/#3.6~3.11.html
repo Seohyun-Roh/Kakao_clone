@@ -1,50 +1,16 @@
-<!--
-Flexbox->자식 엘리먼트에는 어느것도 적지 말아야 함. flex-container가 height를 가지고 있지 않으면 align-items를 사용해도 위치 바뀌지 않음.
-justify-content: 주축(main axis, default가 수평, 변경가능), align-items: 교차축(cross axis, defult가 수직, 변경가능)
-vh(viewport height, height:100vh는 화면 높이의 100%)
--->
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>welcome!</title>
-        <style>
-            *{
-                font-style: italic;
-            }
-            html{
-              border:1px solid gray;  
-            }
-            body{
-                height:100vh;
-                display:flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap; /*wrap으로 하면 브라우저 크기를 줄여도 block끼리 겹쳐지지 않고 브라우저 크기에 맞춰서 block들이 이동함*/
-            }
-            div{
-                display:flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: center;
-                height:150px;
-                width:150px;
-            }
-            .class1{
-                background-color: palevioletred;
-            }
-            .class2{
-                font-weight: bold;
-            }
-            #div1,#div3{
-                background-color: honeydew;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="class1" id="div1">box1</div>
-        <div class="class1 class2">box2</div>
-        <div class="class2" id="div3">box3</div>
-        <div class="class1">box4</div>
-    </body>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="#3.6~3.11.css" />
+    <title>repl.it</title>
+  </head>
+  <body>
+    <div class="square">
+      <div class="square-small"></div>
+      <div class="square-bar"></div>
+      <div class="square-small"></div>
+    </div>
+  </body>
 </html>
