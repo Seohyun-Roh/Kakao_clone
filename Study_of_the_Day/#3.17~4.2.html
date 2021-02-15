@@ -1,44 +1,23 @@
-<!--
-  <Transition>: 어떤 상태에서 다른 상태로의 변화를 애니메이션으로 만드는 방법(state가 없는 요소에 써야함)
-    ease-in function: 브라우저에게 애니메이션이 어떻게 변할지 말해주는 것
-    (default: linear, ease-in, ease-out, ease-in-out. 이 외에 따로 만들어줄 경우 cubiz-beizer이용)
-    http://matthewlein.com/tools/ceaser <--cubiz-beizer는 옆에 사이트 참고해보기!
-  <Transfomation>
-    transfomation은 일종의 3d transfomation이기 대문에 box element를 변형시키지 않는다.(margin,padding 적용 x)
--->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>welcome!</title>
-    <style>
-      img {
-        border: 1px solid black;
-        border-radius: 50%;
-        transform: rotateY(35deg);
-        transition: all 3s cubic-bezier(0.77, 0, 0.175, 1);
-      }
-      img:hover {
-        transform: rotateY(360deg);
-      }
-      button {
-        border: 1px solid black;
-        border-radius: 5px;
-        height: 100px;
-        width: 200px;
-        font-size: 30px;
-        background-color: tomato;
-        color: wheat;
-        margin-left: 30px;
-        transition: all 5s ease-in-out;
-      }
-      button:hover {
-        background-color: wheat;
-        color: tomato;
-      }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="#3.17~4.4.css" />
+    <title>repl.it</title>
   </head>
   <body>
-    <button>buttondddd</button>
-    <img src="https://nomadcoders.co/m.svg" />
+    <div class="circle">
+      <span class="circle__item"></span>
+      <span class="circle__item"></span>
+      <span class="circle__item"></span>
+    </div>
+    <div class="bar">
+      <span class="bar__item"></span>
+      <span class="bar__item"></span>
+      <span class="bar__item"></span>
+      <span class="bar__item"></span>
+      <span class="bar__item"></span>
+    </div>
   </body>
 </html>
