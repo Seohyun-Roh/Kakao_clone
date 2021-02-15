@@ -1,58 +1,40 @@
-<!--
-  <Pseudo Selectors> : 특정한 상태 말고 규칙에 따라 상태가 바뀌는 요소를 선택할 때 사용
-  -> html에서 class나 id를 계속 따로 만들어주는 것보다 훨씬 좋음!
--->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>welcome!</title>
-    <style>
-      body {
-        height: 1000vh;
-        margin: 50px;
-      }
-      div {
-        background-color: aquamarine;
-        height: 150px;
-        width: 150px;
-      }
-      span {
-        background-color: yellowgreen;
-      }
-      /*p의 (바로 뒤의)형제 span을 바꾸고 싶을 때*/
-      p + span {
-        background-color: tomato;
-      }
-      /*p의 (뒤에 있는 모든)형제 span을 바꾸고 싶을 때*/
-      p ~ span {
-        background-color: bisque;
-      }
-      /*required인 input을 바꾸고 싶을 때*/
-      input:required {
-        background-color: burlywood;
-      }
-      /*특정 타입을 선택해서 바꿔주고 싶을 때*/
-      input[type='text'] {
-        font-style: italic;
-      }
-      /*placeholder를 골라서 바꿔줄 수도 있다.
-      placeholder~='name'하면 name이라는 단어를 포함한 모든 placeholder 선택(이 때, first name(O), firstname(X))
-      placeholder*='name'하면 name을 포함한 모든 placeholder 선택(first name(O), firstname(O)*/
-      input[placeholder='first name'] {
-        background-color: chartreuse;
-      }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="#3.12~3.16.css" />
+    <title>repl.it</title>
   </head>
   <body>
-    <form>
-      <span>Hello!</span>
-      <p>hi This is p tag. I want to use <span>span</span> tag too. Thx!</p>
-      <span>Hello!</span>
-      <span>Hello!</span>
-      <div><span>span in div</span></div>
-      <input type="text" placeholder="first name" />
-      <input type="text" placeholder="last name" />
-      <input type="password" required placeholder="password" />
-    </form>
+    <h1>The Best Colors</h1>
+    <div class="colorbox">
+      <div class="colorbox__column">
+        <div class="colorbox__name">
+          <h2>Tomato</h2>
+          <span>#FF6347</span>
+        </div>
+      </div>
+      <div class="colorbox__column">
+        <div class="colorbox__name">
+          <h2>Teal</h2>
+          <span>#008080</span>
+        </div>
+      </div>
+    </div>
+    <div class="colorbox">
+      <div class="colorbox__column">
+        <div class="colorbox__name">
+          <h2>Burlywood</h2>
+          <span>#DEB887</span>
+        </div>
+      </div>
+      <div class="colorbox__column">
+        <div class="colorbox__name">
+          <h2>Thistle</h2>
+          <span>#D7BFD7</span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
