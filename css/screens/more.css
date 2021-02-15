@@ -35,6 +35,9 @@
   align-items: center;
   margin-bottom: 10px;
 }
+.more-suggestions__icon:last-of-type .more-suggestions__icon-image {
+  background-color: #db5271;
+}
 .more-suggestions__icon-image i {
   font-size: 28px;
   color: white;
